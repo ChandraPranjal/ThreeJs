@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import PCDViewer from './components/PCDViewer';
+import React from 'react';
+import PCDViewer from './components/PCDViewer.tsx';
+import './App.css';
 
-
-import './App.css'
-
-function App() {
-
-
+const App: React.FC = () => {
   return (
-    <>
-      return <PCDViewer/>
-    </>
-  )
-}
+    <PCDViewer 
+      pcdFiles={[
+        '/pcds/frame1.pcd',
+        '/pcds/frame2.pcd'
+      ]}
+    />
+  );
+};
 
-export default App
+export default App;
